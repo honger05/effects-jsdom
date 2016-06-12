@@ -3,7 +3,7 @@ var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.entry = [
-  'index', 'detail'
+  'index'
 ]
 
 exports.assetsPath = function (_path) {
