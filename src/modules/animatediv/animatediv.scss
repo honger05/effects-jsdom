@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$w: 200px;
+$h: 100px;
+
+#container {
+  height: $h;
+  width: $w;
+  position: fixed;
+  bottom: 0;
+  left: -$w;
+  background-color: #ff6666;
+}
+
+#btn {
+  height: 50px;
+  width: 20px;
+  position: absolute;
+  left: $w;
+  top: ($h - 50) / 2;
+  background-color: #ddd;
+}

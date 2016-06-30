@@ -16,7 +16,7 @@ export default {
     Cell,
     Group
   },
-  data() {
+  data () {
     return {
       version: '1.0.1'
     }

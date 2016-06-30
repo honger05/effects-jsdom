@@ -44,13 +44,13 @@
       Spinner
     },
     methods: {
-      load(uuid) {
+      load (uuid) {
         setTimeout(() => {
           this.$broadcast('pulldown:reset', uuid)
         }, 2000)
       }
     },
-    data() {
+    data () {
       return {
         pulldownStatus: 'default'
       }
