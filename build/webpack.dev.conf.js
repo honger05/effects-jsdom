@@ -30,7 +30,7 @@ var conf = {
 }
 
 utils.entry.forEach(function(item) {
-  conf.entry[item] = 'src/modules/'+ item +'/index.js'
+  conf.entry[item] = 'src/modules/'+ item +'/'+ item +'.js'
 
   conf.plugins.push(new HtmlWebpackPlugin({
     scope: item,

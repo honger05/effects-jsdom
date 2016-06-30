@@ -6,10 +6,8 @@ import App from './App'
 
 import Home from './Home'
 
-import Hello from 'components/Hello'
-
-import Demo from 'pages/Demo'
-import Pulldown from 'pages/Pulldown'
+import Demo from 'demos/Demo'
+import Pulldown from 'demos/Pulldown'
 
 Vue.use(Router)
 Vue.config.devtools = true

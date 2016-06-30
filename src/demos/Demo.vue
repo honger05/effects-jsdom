@@ -1,8 +1,10 @@
 <template>
-<group title="Scroller" title-color="#04be02">
-  <cell title="pulldown" link="/demo/pulldown">
-  </cell>
-</group>
+<div>
+  <group title="Scroller" title-color="#04be02">
+    <cell title="pulldown" link="/demo/pulldown">
+    </cell>
+  </group>
+</div>
 </template>
 
 <script>

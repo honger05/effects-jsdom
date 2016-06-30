@@ -1,8 +1,10 @@
 <template>
-<group>
-  <cell title="Demo" link="/demo">
-  </cell>
-</group>
+<div>
+  <group>
+    <cell title="Vue Demo" link="/demo"></cell>
+    <cell title="Animated Div" link="http://localhost/animatediv.html"></cell>
+  </group>
+</div>
 </template>
 
 <script>
