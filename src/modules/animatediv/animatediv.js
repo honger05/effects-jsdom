@@ -1,5 +1,9 @@
 require('./animatediv.scss')
 
+/**
+ * 连续动画
+ */
+
 let container = document.getElementById('container')
 let btn = document.getElementById('btn')
 
@@ -15,7 +19,30 @@ btn.onclick = function () {
   }
 }
 
-let timer = null
+/**
+ * icon 动画
+ */
+
+let iconContainer = document.getElementById('iconContainer')
+let conLi = iconContainer.getElementsByTagName('li')
+let conIcon = iconContainer.getElementsByTagName('span')
+
+for (let i = 0; i < conLi.length; i++) {
+  conLi[i].index = i
+  conIcon[i].timer = null
+  conLi[i].onmouseenter = function (ev) {
+    ev.stopPropagation()
+    move(conIcon[this.index], {top: 0, opacity: 0}, obj => {
+      obj.style.top = 50 + 'px'
+      move(obj, {top: 20, opacity: 100})
+    })
+  }
+}
+
+/**
+ * 动画 helper =================
+ */
+
 let isComplete = false
 
 /**
@@ -26,8 +53,8 @@ let isComplete = false
  * @param  {Function} fn        [动画执行完成后的回调函数]
  */
 function move (obj, attrClass, fn) {
-  clearInterval(timer)
-  timer = setInterval(() => {
+  clearInterval(obj.timer)
+  obj.timer = setInterval(() => {
     for (let attr in attrClass) {
       let curStyle = getStyle(obj, attr)
       let tagStyle = attrClass[attr]
@@ -46,8 +73,8 @@ function move (obj, attrClass, fn) {
     }
 
     if (isComplete) {
-      clearInterval(timer)
-      fn && fn()
+      clearInterval(obj.timer)
+      fn && fn(obj)
     }
   }, 16)
 }

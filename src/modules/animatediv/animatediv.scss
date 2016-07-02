@@ -23,3 +23,33 @@ $h: 100px;
   top: ($h - 50) / 2;
   background-color: #ddd;
 }
+
+#iconContainer {
+  width: 250px;
+  font-size: 14px;
+  margin: 100px auto;
+  ul li {
+    display: block;
+    float: left;
+    border: 1px solid #eee;
+    position: relative;
+    padding: 20px 15px 5px 15px;
+    &:hover {
+      border: 1px solid #f40;
+    }
+    p {
+      color: #999;
+      margin-top: 24px;
+    }
+    p:hover {
+      color: #f40;
+    }
+    span {
+      color: #f40;
+      top: 20px;
+      left: 50%;
+      margin-left: -10px;
+      position: absolute;
+    }
+  }
+}
