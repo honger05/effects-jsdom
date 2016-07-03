@@ -2,8 +2,12 @@
 require('../scss/app.scss')
 require('bower/animate.css/animate.css')
 
-require('./core/_vue-transition')
+require('./core/_error')
+require('./vue-helper/_vue-transition')
+
+require('./test/_test')
 
 module.exports = {
-  log: require('./core/_log')
+  Core: require('./core/_core.js'),
+  Log: require('./core/_log')
 }
