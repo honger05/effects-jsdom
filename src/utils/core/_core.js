@@ -195,7 +195,7 @@ export function fibonacci (n) {
   if (n < 0) {
     return _Fib.clear()
   }
-  return _Fib(n)[n]
+  return _Fib.get(n)[n]
 }
 
 // 使用闭包存储中间结果，利于多次调用

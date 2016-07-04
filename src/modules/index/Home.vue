@@ -4,6 +4,7 @@
     <cell title="Vue Demo" link="/demo"></cell>
     <cell title="Animated Div" link="http://localhost/animatediv.html"></cell>
     <cell title="Simple Tab" link="http://localhost/tab.html"></cell>
+    <cell title="table sort" link="http://localhost/tablesort.html"></cell>
   </group>
 </div>
 </template>

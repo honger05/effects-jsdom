@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>table sort</title>
+    <%= require('html!tmpl/inc-meta.html') %>
+  </head>
+  <body>
+    <div class="container">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th onclick="sortTable('tbl', 0)">Last Name</th>
+            <th onclick="sortTable('tbl', 1)">First Name</th>
+            <th onclick="sortTable('tbl', 2, 'date')">Birthday</th>
+            <th onclick="sortTable('tbl', 3, 'int')">Siblings</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Smith</td>
+            <td>John</td>
+            <td>7/12/1978</td>
+            <td>50nGy/h</td>
+          </tr>
+          <tr>
+            <td>Johnson</td>
+            <td>Betty</td>
+            <td>5/12/1965</td>
+            <td>20nGy/h</td>
+          </tr>
+          <tr>
+            <td>Henderson</td>
+            <td>Nathan</td>
+            <td>10/15/1977</td>
+            <td>130nGy/h</td>
+          </tr>
+          <tr>
+            <td>Willianms</td>
+            <td>James</td>
+            <td>2/25/1949</td>
+            <td>10nGy/h</td>
+          </tr>
+          <tr>
+            <td>Gilliam</td>
+            <td>Michael</td>
+            <td>7/8/1980</td>
+            <td>140nGy/h</td>
+          </tr>
+          <tr>
+            <td>Walker</td>
+            <td>Matthew</td>
+            <td>6/18/1981</td>
+            <td>103nGy/h</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <%= require('html!tmpl/inc-footer.html') %>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

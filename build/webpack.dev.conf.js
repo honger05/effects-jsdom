@@ -15,7 +15,7 @@ var conf = {
     loaders: utils.styleLoaders()
   },
   // eval-source-map is faster for development
-  devtool: '#eval-source-map',
+  devtool: '#cheap-source-map',
   plugins: [
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
     new webpack.optimize.OccurenceOrderPlugin(),

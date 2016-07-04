@@ -1,0 +1,16 @@
+#tbl {
+  border-collapse: collapse;
+  %dh {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+  }
+  th {
+    @extend %dh;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+  }
+  td {
+    @extend %dh;
+  }
+}

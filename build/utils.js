@@ -3,7 +3,7 @@ var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.entry = [
-  'index', 'animatediv', 'tab'
+  'index', 'animatediv', 'tab', 'tablesort'
 ]
 
 exports.assetsPath = function (_path) {
