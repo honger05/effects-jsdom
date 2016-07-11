@@ -27,7 +27,10 @@ module.exports = {
       'bower': path.resolve(__dirname, '../src/bower_components'),
       'animate': path.resolve(bowerRoot, 'animate.css-scss'),
       'vuxcpt': path.resolve(bowerRoot, 'vux/dist/components-commonjs'),
-      'vue-router': path.resolve(bowerRoot, 'vue-router/dist/vue-router')
+      'vue-router': path.resolve(bowerRoot, 'vue-router/dist/vue-router'),
+      'vue-resource': path.resolve(bowerRoot, 'vue-resource/dist/vue-resource'),
+      'vue-validator': path.resolve(bowerRoot, 'vue-validator/dist/vue-validator'),
+      'fastclick': path.resolve(bowerRoot, 'fastclick/lib/fastclick')
     }
   },
   resolveLoader: {

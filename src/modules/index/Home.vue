@@ -1,7 +1,8 @@
 <template>
 <div>
   <group>
-    <cell title="Vue Demo" link="/demo"></cell>
+    <cell title="Vux Demo" link="/demo"></cell>
+    <cell title="Vue CnodeJs" link="http://localhost/vuecnode.html"></cell>
     <cell title="Animated Div" link="http://localhost/animatediv.html"></cell>
     <cell title="Simple Tab" link="http://localhost/tab.html"></cell>
     <cell title="table sort" link="http://localhost/tablesort.html"></cell>
