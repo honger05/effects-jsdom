@@ -14,6 +14,7 @@ module.exports = {
     "sourceType": "module"
   },
   'rules': {
+    'no-undef': 0,
     'arrow-parens': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0

@@ -1,4 +1,6 @@
 
+// 核心方法
+
 /**
  * 获取 url 中的参数
  *
@@ -23,22 +25,6 @@ export function getUrlParam (url, key) {
     return result
   }
   return result[key] || ''
-}
-
-/**
- * 查找两个节点的最近的一个共同父节点，可以包括节点自身
- *
- * @param  {[type]} oNode1 [description]
- * @param  {[type]} oNode2 [description]
- * @return {[type]}        [description]
- */
-function commonParentNode(oNode1, oNode2) {
-  if (oNode1.contains(oNode2)) {
-    return oNode1
-  } else if (oNode2.contains(oNode1)) {
-    return oNode2
-  }
-  return commonParentNode(oNode1.parentNode, oNode2.parentNode)
 }
 
 /**
@@ -69,17 +55,6 @@ export function uniq (arr) {
     }
   })
   return newArr
-}
-
-/**
- * Email 验证
- *
- * @param  {[type]}  email [description]
- * @return {Boolean}       [description]
- */
-export function isAvailableEmail (email) {
-  var regexp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/
-  return regexp.test(email)
 }
 
 /**
@@ -120,43 +95,6 @@ export function cssStyle2DomStyle(sName) {
   return sName.replace(/(?!^)\-(\w)(\w+)/g, (a, b, c) => {
     return b.toUpperCase() + c.toLowerCase()
   }).replace(/^\-/, '')
-}
-
-/**
- * 日期格式化
- *
- * @param  {[type]} d      [description]
- * @param  {[type]} format [description]
- * @return {[type]}        [description]
- */
-export function formatDate(d, format) {
-  let year = d.getFullYear(),
-      month = d.getMonth() + 1,
-      date = d.getDate(),
-      hour = d.getHours(),
-      minute = d.getMinutes(),
-      second = d.getSeconds(),
-      day = d.getDay(),
-      week = ['日', '一', '二', '三', '四', '五', '六']
-      return format.replace(/yyyy/, year)
-                   .replace(/yy/, pad(year % 100))
-                   .replace(/MM/, pad(month))
-                   .replace(/M/, month)
-                   .replace(/dd/, pad(date))
-                   .replace(/d/, date)
-                   .replace(/HH/, pad(hour))
-                   .replace(/H/, hour)
-                   .replace(/hh/, pad(hour % 12))
-                   .replace(/h/, hour % 12)
-                   .replace(/mm/, pad(minute))
-                   .replace(/m/, minute)
-                   .replace(/ss/, pad(second))
-                   .replace(/s/, second)
-                   .replace(/w/, week[day])
-}
-
-function pad(n) {
-  return n > 10 ? n : '0' + +n
 }
 
 /**
