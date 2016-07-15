@@ -8,7 +8,7 @@
  */
 export function getLastTimeStr (time, friendly) {
   if (friendly) {
-    return Utils.MillisecondToDate(new Date() - new Date(time))
+    return Utils.formNow(time)
   }
   return Utils.fmtDate(new Date(time), 'yyyy-MM-dd hh:mm')
 }

@@ -5,7 +5,7 @@ require('bower/animate.css/animate.css')
 require('./core/_error')
 require('./vue-helper/_vue-transition')
 
-require('./test/_test')
+// require('./test/_test')
 
 let Utils = extend({},
   require('./core/_core'),
@@ -18,7 +18,6 @@ module.exports = Utils
 
 /**
  *  扩展函数
- *
  */
 function extend () {
   let target = arguments[0] || {}

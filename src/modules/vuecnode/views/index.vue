@@ -1,14 +1,13 @@
 <template>
   <div>
-    <img src="../assets/index.png" alt="" class="index">
+    <img src="../assets/images/index.png" alt="" class="index">
   </div>
 </template>
 <script>
   export default {
     ready () {
       setTimeout(() => {
-        // this.$route.router.go({name: 'lis'})
-        console.log(1)
+        this.$route.router.go({name: 'list'})
       }, 2000)
     }
   }
