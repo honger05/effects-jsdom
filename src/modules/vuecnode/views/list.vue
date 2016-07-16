@@ -5,6 +5,34 @@
       :need-add="true"
       :show-menu.sync="showMenu">
     </nv-head>
+
+    <section id="page">
+      <ul class="posts-list">
+        <li v-for="item in topics"
+          v-link="{name: 'topic', params: {id: item.id}}">
+          <h3 v-text="item.title"
+            :class="item.tab | getTabClassName item.good item.top"
+            :title="item.tab | getTabStr item.good item.top">
+          </h3>
+          <div class="content">
+            <img :src="item.author.avatar_url" class="avatar">
+            <div class="info">
+              <p>
+                <span class="name">{{item.author.loginname}}</span>
+                <span class="status" v-if="item.reply_count > 0">
+                  <b>{{item.reply_count}}</b>
+                  /{{item.visit_count}}
+                </span>
+              </p>
+              <p>
+                <time>{{item.create_at | getLastTimeStr true}}</time>
+                <time>{{item.last_reply_at | getLastTimeStr true}}</time>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -73,13 +101,22 @@
 
     methods: {
       getTopics () {
-        console.log('get data ...')
+        this.$log('searchKey')
+        let params = Utils.param(this.searchKey)
+        this.$http.get('api/v1/topics?' + params)
+          .then(response => {
+            this.scroll = true
+            let datum = response.data
+            if (datum && datum.data) {
+              this.topics = datum.data
+            }
+          })
       },
 
       getScrollData () {
         if (this.scroll) {
-          let totalHeight = ~~(window.innerHeight + window.pageYOffset)
-          if (document.body.clientHeight <= totalHeight + 200) {
+          let currentHeight = ~~(window.innerHeight + window.pageYOffset)
+          if (currentHeight >= document.body.clientHeight - 400) {
             this.scroll = false
             this.searchKey.limit += 20
             this.getTopics()
@@ -93,3 +130,9 @@
     }
   }
 </script>
+
+<style lang="scss">
+@import '../assets/scss/iconfont/iconfont.css';
+@import '../assets/scss/CV.scss';
+@import '../assets/scss/github-markdown.css';
+</style>

@@ -17,6 +17,12 @@ export default function (router) {
       component: function (resolve) {
         require(['./views/list.vue'], resolve)
       }
+    },
+    'topic': {
+      name: 'topic',
+      component: function (resolve) {
+        require(['./views/topic.vue'], resolve)
+      }
     }
   })
 }

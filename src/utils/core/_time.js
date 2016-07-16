@@ -43,7 +43,7 @@ export function fmtDate (date, fmt) {
  * @return {[type]}      [description]
  */
 export function fromNow (time) {
-  const between = Date.now() / 1000 - Number(time)
+  const between = Date.now() / 1000 - (new Date(time)).getTime() / 1000
   if (between < 60) {
     return pluralize(between, ' 秒前')
   } else if (between < 3600) {

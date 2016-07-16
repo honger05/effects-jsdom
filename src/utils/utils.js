@@ -3,7 +3,7 @@ require('../scss/app.scss')
 require('bower/animate.css/animate.css')
 
 require('./core/_error')
-require('./vue-helper/_vue-transition')
+require('./vue-helper/_vue-common')
 
 // require('./test/_test')
 

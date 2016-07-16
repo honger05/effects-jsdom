@@ -2,6 +2,25 @@
 // 核心方法
 
 /**
+ * 将普通对象序列化
+ *
+ * @param  {[type]} obj [description]
+ * @return {[type]}     [description]
+ */
+export function param (obj) {
+  let s = []
+  let add = (key, value) => {
+    s.push(encodeURIComponent(key) + '=' + encodeURIComponent(value))
+  }
+
+  for (let i in obj) {
+    obj[i] && add(i, obj[i])
+  }
+
+  return s.join('&')
+}
+
+/**
  * 获取 url 中的参数
  *
  * @param  {String} url 给定的url
