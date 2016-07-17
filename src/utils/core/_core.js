@@ -2,6 +2,25 @@
 // 核心方法
 
 /**
+ *  在数组中查找项
+ *
+ * @param  {Array} arr  数组
+ * @param  {基本数据类型} item [description]
+ * @return {[type]}      [description]
+ */
+export function inArray (arr, item) {
+  if (arr.indexOf) {
+    return arr.indexOf(item)
+  }
+  for (let i = 0, l = arr.length; i < l; i) {
+    if (arr[i] === item) {
+      return i
+    }
+  }
+  return -1
+}
+
+/**
  * 将普通对象序列化
  *
  * @param  {[type]} obj [description]

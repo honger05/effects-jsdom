@@ -33,6 +33,7 @@
         </li>
       </ul>
     </section>
+    <nv-top></nv-top>
   </div>
 </template>
 
@@ -116,7 +117,7 @@
       getScrollData () {
         if (this.scroll) {
           let currentHeight = ~~(window.innerHeight + window.pageYOffset)
-          if (currentHeight >= document.body.clientHeight - 400) {
+          if (currentHeight >= document.body.clientHeight - 200) {
             this.scroll = false
             this.searchKey.limit += 20
             this.getTopics()
@@ -126,7 +127,8 @@
     },
 
     components: {
-      'nvHead': require('../components/header.vue')
+      'nvHead': require('../components/header.vue'),
+      'nvTop': require('../components/backtotop.vue')
     }
   }
 </script>

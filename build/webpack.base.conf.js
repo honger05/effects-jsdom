@@ -30,7 +30,8 @@ module.exports = {
       'vue-router': path.resolve(bowerRoot, 'vue-router/dist/vue-router'),
       'vue-resource': path.resolve(bowerRoot, 'vue-resource/dist/vue-resource'),
       'vue-validator': path.resolve(bowerRoot, 'vue-validator/dist/vue-validator'),
-      'fastclick': path.resolve(bowerRoot, 'fastclick/lib/fastclick')
+      'fastclick': path.resolve(bowerRoot, 'fastclick/lib/fastclick'),
+      'markdown': path.resolve(bowerRoot, 'markdown-js/dist/markdown.min')
     }
   },
   resolveLoader: {
