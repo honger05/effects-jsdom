@@ -1,8 +1,7 @@
 <template>
-  <div class="iconfont icon-top"
+  <div class="icon-rocket"
     v-show="show"
     @click="goTop">
-    &#xe611;
   </div>
 </template>
 
@@ -39,12 +38,13 @@
 </script>
 
 <style>
-.icon-top {
+.icon-rocket {
   position: fixed;
   right: 10px;
   bottom: 80px;
   font-size: 50px;
   z-index: 9999;
-  color: #42b983;
+  color: #e8bf38;
+  transform: rotate(316deg);
 }
 </style>

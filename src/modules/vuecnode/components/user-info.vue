@@ -1,7 +1,9 @@
 <template>
   <div class="user-info">
     <ul class="login-no" v-if="!loginname">
-      <li class="login" @click="goEnter">登录</li>
+      <li class="login icon-home" @click="goEnter">
+        <i class=""></i>登录
+      </li>
     </ul>
     <div class="login-yes" v-if="loginname" @click="goUser">
       <div class="avertar">
@@ -56,7 +58,6 @@
     &:before {
       width: 24px;
       height: 24px;
-      content: '';
       position: absolute;
       left: 0;
       top: 0;
@@ -64,16 +65,11 @@
   }
   .login {
     float: left;
-    &:before {
-      background: url(../assets/images/components/login_icon.png) no-repeat left center;
-      background-size: 24px 24px;
-    }
   }
 }
 
 .login-yes {
   height: 100%;
-  background: url(../assets/images/components/go_next_icon.png) no-repeat right center;
   background-size: 6px 10px;
   overflow: hidden;
   position: relative;

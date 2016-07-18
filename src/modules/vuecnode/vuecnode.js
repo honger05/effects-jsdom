@@ -1,4 +1,4 @@
-import './assets/scss/iconfont/iconfont.css'
+import './assets/icomoon/style.css'
 import './assets/scss/CV.scss'
 import './assets/scss/github-markdown.css'
 import Vue from 'vue'
@@ -21,8 +21,6 @@ let router = new VueRouter({
 router.beforeEach(transition => {
   FastClick.attach(document.body)
 
-  console.log(transition)
-
   if (transition.to.auth) {
     if (localStorage.userId) {
       transition.next()
@@ -33,6 +31,10 @@ router.beforeEach(transition => {
   } else {
     transition.next()
   }
+})
+
+router.afterEach(transition => {
+  console.log('成功浏览到: ' + transition.to.path)
 })
 
 let app = Vue.extend({})

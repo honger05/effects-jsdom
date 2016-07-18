@@ -2,12 +2,12 @@
   <section id="sideBar" class="nav-list" :class="{'show': showMenu}">
     <user-info></user-info>
     <ul class="list-ul">
-      <li class="iconfont icon-quanbu" v-link="{name: 'list', query: {tab: 'all'}}">全部</li>
-      <li class="iconfont icon-hao" v-link="{name: 'list', query: {tab: 'good'}}">精华</li>
-      <li class="iconfont icon-fenxiang" v-link="{name: 'list', query: {tab: 'share'}}">分享</li>
-      <li class="iconfont icon-wenda" v-link="{name: 'list', query: {tab: 'ask'}}">问答</li>
-      <li class="iconfont icon-zhaopin" v-link="{name: 'list', query: {tab: 'job'}}">招聘</li>
-      <li class="iconfont icon-xiaoxi line" v-link="{name: 'message'}">消息</li>
+      <li class="iconfont icon-menu" v-link="{name: 'list', query: {tab: 'all'}}">全部</li>
+      <li class="iconfont icon-thumbsup" v-link="{name: 'list', query: {tab: 'good'}}">精华</li>
+      <li class="iconfont icon-share2" v-link="{name: 'list', query: {tab: 'share'}}">分享</li>
+      <li class="iconfont icon-bubbles" v-link="{name: 'list', query: {tab: 'ask'}}">问答</li>
+      <li class="iconfont icon-users" v-link="{name: 'list', query: {tab: 'job'}}">招聘</li>
+      <li class="iconfont icon-alarm line" v-link="{name: 'message'}">消息</li>
     </ul>
   </section>
 </template>
@@ -56,6 +56,7 @@
     }
     &:before{
       color: #b89f7a;
+      margin-right: 20px;
     }
   }
   .line{

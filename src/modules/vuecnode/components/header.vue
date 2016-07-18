@@ -3,14 +3,15 @@
     <div class="page-cover" v-show="showMenu" @click="toggleMenu"></div>
     <header :class="{'show': showMenu}" id="hd" class="fix-header">
       <div class="nv-toolbar">
-        <div class="toolbar-nav" @click="toggleMenu"></div>
-        <span v-text="pageType"></span>
+        <div class="toolbar-nav" @click="toggleMenu">
+          <i class="icon-fire"></i>
+        </div>
+        <span class="page-type" v-text="pageType"></span>
         <i class="num" v-if="messageCount > 0"> {{messageCount}}</i>
-        <i class="iconfont add-icon"
+        <i class="icon-quill add-icon"
           v-show="!messageCount || messageCount <= 0"
           v-if="needAdd"
           v-link="{name: 'add'}">
-          &#xe60f;
         </i>
       </div>
     </header>
@@ -47,11 +48,15 @@
 </script>
 
 <style lang="scss">
+.page-type {
+  color: #b89a74;
+}
+
 #hd {
   border-bottom: 1px solid #e8e8e8;
   &.fix-header {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(60, 57, 57, 0.95);
     position: fixed;
     top: 0;
     left: 0;
@@ -77,8 +82,11 @@
   .toolbar-nav {
     width: 49px;
     height: 44px;
+    line-height: 48px;
     position: absolute;
-    background: url(../assets/images/components/nav_icon.png) no-repeat center center;
+    text-align: center;
+    font-size: 20px;
+    color: #b89a74;
     background-size: 19px 16px;
     margin: 0;
     z-index: 1;
@@ -110,13 +118,14 @@
     z-index: 10;
   }
   .add-icon{
-    color: #42b983;
+    color: #e8bf38;
     position: absolute;
     right: 10px;
     top: 10px;
     z-index: 10;
-    padding: 5px 15px;
+    padding: 2px;
     border-radius: 5px;
+    font-size: 18px;
   }
 }
 

@@ -11,15 +11,19 @@
 }
 
 .views-enter {
-  @include fadeInDown(
-    $duration: 1s,
+  height: 100%;
+  overflow: hidden;
+  @include fadeInUp(
+    $duration: 0.6s,
     $delay: 0
   );
 }
 
 .views-leave {
-  @include fadeOutUp(
-    $duration: 1s,
+  height: 100%;
+  overflow: hidden;
+  @include fadeOutDown(
+    $duration: 0.6s,
     $delay: 0
   );
 }

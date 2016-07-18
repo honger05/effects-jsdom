@@ -27,7 +27,7 @@
 /*模块入口样式*/
 
 .posts-list {
-    background-color: $white;
+    background-color: #f1f0f0;
     li {
         padding: 10px $padding;
         border-bottom: $border;
@@ -59,7 +59,7 @@
     }
     .content {
         padding-top: 10px;
-        @extend .display-flex; 
+        @extend .display-flex;
     }
     .avatar {
        @extend .user-avatar;
@@ -74,10 +74,10 @@
         font-size: $font-info;
 
         &:first-child {
-            font-size: $font-content; 
+            font-size: $font-content;
         }
         .name, time:first-child {
-           @extend .flex; 
+           @extend .flex;
         }
         b {
             color: #42b983;
