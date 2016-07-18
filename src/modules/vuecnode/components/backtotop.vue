@@ -19,6 +19,8 @@
       window.addEventListener('scroll', ev => {
         if (window.scrollY > 100) {
           this.show = true
+        } else {
+          this.show = false
         }
       })
     },

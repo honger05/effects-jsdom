@@ -38,12 +38,6 @@ export default function (router) {
       },
       auth: true
     },
-    '/about': {
-      name: 'about',
-      component: function (resolve) {
-        require(['./views/about.vue'], resolve)
-      }
-    },
     '/login': {
       name: 'login',
       component: function (resolve) {

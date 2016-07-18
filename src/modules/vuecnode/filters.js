@@ -7,10 +7,13 @@
  * @return {String}
  */
 export function getLastTimeStr (time, friendly) {
+  if (!time) {
+    return
+  }
   if (friendly) {
     return Utils.fromNow(time)
   }
-  return Utils.fmtDate(new Date(time), 'yyyy-MM-dd hh:mm')
+  return Utils.formatDate(new Date(time), 'yyyy-MM-dd hh:mm')
 }
 
 /**

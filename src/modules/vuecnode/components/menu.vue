@@ -8,7 +8,6 @@
       <li class="iconfont icon-wenda" v-link="{name: 'list', query: {tab: 'ask'}}">问答</li>
       <li class="iconfont icon-zhaopin" v-link="{name: 'list', query: {tab: 'job'}}">招聘</li>
       <li class="iconfont icon-xiaoxi line" v-link="{name: 'message'}">消息</li>
-      <li class="iconfont icon-about" v-link="{name: 'about'}">关于</li>
     </ul>
   </section>
 </template>

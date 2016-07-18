@@ -24,6 +24,7 @@ module.exports = {
       'demos': path.resolve(__dirname, '../src/demos'),
       'tmpl': path.resolve(__dirname, '../src/tmpl'),
       'utils': path.resolve(__dirname, '../src/utils/utils'),
+      'lib': path.resolve(__dirname, '../src/utils/lib'),
       'bower': path.resolve(__dirname, '../src/bower_components'),
       'animate': path.resolve(bowerRoot, 'animate.css-scss'),
       'vuxcpt': path.resolve(bowerRoot, 'vux/dist/components-commonjs'),

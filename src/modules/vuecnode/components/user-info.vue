@@ -20,7 +20,7 @@
     data () {
       return {
         loginname: localStorage.loginname || '',
-        avatarUrl: localStorage.avatarUrl || ''
+        avatarUrl: localStorage.avatar_url || ''
       }
     },
 

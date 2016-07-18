@@ -68,7 +68,7 @@
                 this.show = ''
               }
             }, res => {
-              let error = JSON.parse(res.responseText)
+              let error = res.data
               this.alert.txt = error.error_msg
               this.alert.show = true
               this.alert.hideFn()

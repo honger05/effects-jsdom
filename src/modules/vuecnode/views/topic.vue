@@ -66,6 +66,7 @@
     </section>
 
     <nv-top></nv-top>
+    <nv-alert :content="alert.txt" :show="alert.show"></nv-alert>
 
     <nv-reply v-if="userId"
       :topic.sync="topic"
@@ -84,6 +85,7 @@
 <script>
   export default {
     data () {
+      let _self = this
       return {
         showMenu: false,
         topic: {},
@@ -98,8 +100,8 @@
             let timer
             clearTimeout(timer)
             timer = setTimeout(() => {
-              this.alert.show = false
-            })
+              _self.alert.show = false
+            }, 1000)
           }
         }
       }
@@ -149,7 +151,7 @@
               }
             }
           }, res => {
-            let error = JSON.parse(res.responseText)
+            let error = res.data
             this.alert.txt = error.error_msg
             this.alert.show = true
             this.alert.hideFn()
