@@ -38,6 +38,8 @@
 </template>
 
 <script>
+  let scrollListener = null
+
   export default {
     data () {
       return {
@@ -72,7 +74,7 @@
           this.topics = JSON.parse(sessionStorage.topics)
           this.searchKey = JSON.parse(sessionStorage.searchKey)
           this.$nextTick(() => {
-            window.pageYOffset = sessionStorage.scrollTop
+            window.scrollTo(0, sessionStorage.scrollTop)
           })
         } else {
           this.searchKey.tab = query.tab
@@ -81,15 +83,19 @@
 
         this.showMenu = false
 
-        window.addEventListener('scroll', () => this.getScrollData(), false)
+        scrollListener = ev => {
+          this.getScrollData()
+        }
+
+        window.addEventListener('scroll', scrollListener, false)
       },
 
       deactivate (transition) {
-        window.removeEventListener('scroll')
+        window.removeEventListener('scroll', scrollListener, false)
         if (transition.to.name === 'topic') {
           sessionStorage.scrollTop = window.pageYOffset
           sessionStorage.topics = JSON.stringify(this.topics)
-          sessionStorage.searchKey = JSON.stringify(this.topics)
+          sessionStorage.searchKey = JSON.stringify(this.searchKey)
           sessionStorage.tab = transition.from.query.tab || 'all'
         } else {
           sessionStorage.removeItem('topics')
@@ -132,9 +138,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-@import '../assets/scss/iconfont/iconfont.css';
-@import '../assets/scss/CV.scss';
-@import '../assets/scss/github-markdown.css';
-</style>

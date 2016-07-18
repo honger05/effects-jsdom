@@ -18,7 +18,7 @@ body {
     color: #313131;
     overflow-x: hidden;
     line-height: 1;
-    background:url('../assets/images/loading.gif') no-repeat center 250px;
+    background:url('../../assets/images/loading.gif') no-repeat center 250px;
 }
 
 .mt5 {
@@ -197,14 +197,14 @@ $title : #2c3e50;
 $text  : #34495e;
 
 /* 基础布局 */
-$padding : 15px; 
+$padding : 15px;
 $border: 1px solid $light;
-$radius: 4px; 
+$radius: 4px;
 
 $font-title: 16px;
 $font-content: 14px;
 $font-info: 12px;
-$font-tag: 10px; 
+$font-tag: 10px;
 
 
 
@@ -265,5 +265,3 @@ $font-tag: 10px;
     margin-right: 10px;
     border: 1px solid #F3F3F3;
 }
-
-

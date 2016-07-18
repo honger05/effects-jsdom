@@ -1,4 +1,6 @@
-
+import './assets/scss/iconfont/iconfont.css'
+import './assets/scss/CV.scss'
+import './assets/scss/github-markdown.css'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import FastClick from 'fastclick'
