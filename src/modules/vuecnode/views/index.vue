@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img src="../assets/images/index.png" alt="" class="index">
+  <div style="text-align:center">
+    <img src="../assets/images/vue-logo.png" alt="" class="index">
   </div>
 </template>
 <script>
@@ -14,8 +14,7 @@
 </script>
 <style>
   .index {
-    width: 100%;
+    width: 60%;
     background-color: #fff;
-    margin-top: 40%;
   }
 </style>

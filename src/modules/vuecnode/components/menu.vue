@@ -56,7 +56,7 @@
     }
     &:before{
       color: #b89f7a;
-      margin-right: 20px;
+      margin-right: 30px;
     }
   }
   .line{

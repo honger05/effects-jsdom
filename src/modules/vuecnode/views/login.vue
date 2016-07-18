@@ -164,7 +164,7 @@
       font-size: 16px;
       background-color: #b89a74;
       border: none;
-      border-bottom: 2px solid #b89a88;
+      border-bottom: 2px solid #825e33;
       text-align: center;
       vertical-align: middle;
     }
