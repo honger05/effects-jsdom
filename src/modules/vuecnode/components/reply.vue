@@ -10,9 +10,7 @@
 </template>
 
 <script>
-  import { markdown } from 'markdown'
-
-  console.log(markdown)
+  let markdown = require('markdown').markdown
 
   export default {
     replace: true,

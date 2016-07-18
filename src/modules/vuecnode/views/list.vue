@@ -6,7 +6,7 @@
       :show-menu.sync="showMenu">
     </nv-head>
 
-    <section id="page">
+    <section id="page" :class="{'show-menu': showMenu}">
       <ul class="posts-list">
         <li v-for="item in topics"
           v-link="{name: 'topic', params: {id: item.id}}">
@@ -66,8 +66,8 @@
         }
 
         if (transition.from.name === 'list') {
-          this.searchKey.limit = 20
           this.searchKey = JSON.parse(this.searchDataStr)
+          this.searchKey.limit = 20
         }
 
         if (sessionStorage.searchKey && transition.from.name === 'topic' && sessionStorage.tab === tab) {
@@ -79,9 +79,11 @@
         } else {
           this.searchKey.tab = query.tab
           this.getTopics()
+          window.scrollTo(0, 0)
         }
 
         this.showMenu = false
+        document.body.classList.remove('scroll-hide')
 
         scrollListener = ev => {
           this.getScrollData()

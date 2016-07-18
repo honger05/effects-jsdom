@@ -5,7 +5,7 @@
     fix-head="true">
   </nv-head>
 
-  <div id="page" v-if="topic.title" v-class="show-menu: showMenu">
+  <div id="page" v-if="topic.title">
     <h2 class="topic-title" v-text="topic.title"></h2>
     <section class="author-info">
       <img :src="topic.author.avatar_url" alt="" class="avatar">
@@ -66,7 +66,7 @@
     </section>
 
     <nv-top></nv-top>
-    
+
     <nv-reply v-if="userId"
       :topic.sync="topic"
       :topic-id="topicId"

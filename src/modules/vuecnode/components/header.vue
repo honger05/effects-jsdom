@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="page-cover" v-show="showMenu" @click="openMenu"></div>
+    <div class="page-cover" v-show="showMenu" @click="toggleMenu"></div>
     <header :class="{'show': showMenu}" id="hd" class="fix-header">
       <div class="nv-toolbar">
-        <div class="toolbar-nav" @click="openMenu"></div>
+        <div class="toolbar-nav" @click="toggleMenu"></div>
         <span v-text="pageType"></span>
         <i class="num" v-if="messageCount > 0"> {{messageCount}}</i>
         <i class="iconfont add-icon"
           v-show="!messageCount || messageCount <= 0"
           v-if="needAdd"
-          v-link="{name: 'list'}">
+          v-link="{name: 'add'}">
           &#xe60f;
         </i>
       </div>
@@ -34,8 +34,9 @@
     },
 
     methods: {
-      openMenu () {
+      toggleMenu () {
         this.showMenu = !this.showMenu
+        document.body.classList.toggle('scroll-hide')
       }
     },
 
@@ -124,13 +125,4 @@
   overflow: hidden;
 }
 
-.page-cover {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 7;
-}
 </style>
