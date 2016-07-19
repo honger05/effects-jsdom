@@ -16,7 +16,7 @@
 
     ready () {
       window.addEventListener('scroll', ev => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 200) {
           this.show = true
         } else {
           this.show = false
@@ -30,7 +30,13 @@
 
     methods: {
       goTop () {
-        window.scrollTo(0, 0)
+        let timer = setInterval(() => {
+          if (document.body.scrollTop === 0) {
+            clearInterval(timer)
+          }
+          let speed = Math.ceil((document.body.scrollTop - 0) / 20)
+          document.body.scrollTop = document.body.scrollTop - speed
+        }, 16)
         this.show = false
       }
     }

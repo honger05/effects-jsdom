@@ -5,8 +5,8 @@ module.exports = {
   build: {
     index: path.resolve(__dirname, 'dist/index.html'),
     assetsRoot: path.resolve(__dirname, 'dist-un'),
-    // assetsSubDirectory: 'vuecnode/static',
     assetsSubDirectory: 'static',
+    // assetsSubDirectory: 'vuecnode/static',
     assetsPublicPath: '/',
     productionSourceMap: false
   },

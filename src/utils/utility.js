@@ -6,11 +6,12 @@ require('./vue-helper/_vue-common')
 
 // require('./test/_test')
 
-let Utils = extend({},
+var Utils = extend({},
   require('./core/_core'),
   require('./core/_check'),
   require('./core/_time'),
-  require('./core/_text')
+  require('./core/_text'),
+  require('./core/_animate')
 )
 
 module.exports = Utils
@@ -19,9 +20,9 @@ module.exports = Utils
  *  扩展函数
  */
 function extend () {
-  let target = arguments[0] || {}
-  let i = 1, options, copy
-  let len = arguments.length
+  var target = arguments[0] || {}
+  var i = 1, options, copy
+  var len = arguments.length
 
   for (; i < len; i++) {
     if ((options = arguments[i]) !== null) {
