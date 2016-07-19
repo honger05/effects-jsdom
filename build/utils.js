@@ -3,8 +3,8 @@ var config = require('../config')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.entry = [
-  'vuecnode', 
-  'index', 'animatediv', 'tab', 'tablesort'
+  'vuecnode'
+  // 'index', 'animatediv', 'tab', 'tablesort'
 ]
 
 exports.assetsPath = function (_path) {

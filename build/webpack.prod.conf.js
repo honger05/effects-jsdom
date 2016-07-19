@@ -58,14 +58,14 @@ utils.entry.forEach(function(item) {
     filename: item + '.html',
     template: 'src/modules/'+ item +'/' + item + '.html',
     inject: 'body',
-    chunks: [ item ],
-    minify: {
-      removeComments: true,
-      collapseWhitespace: true,
-      removeAttributeQuotes: true
-      // more options:
-      // https://github.com/kangax/html-minifier#options-quick-reference
-    }
+    chunks: [ item ]
+    // minify: {
+    //   removeComments: true,
+    //   collapseWhitespace: true,
+    //   removeAttributeQuotes: true
+    //   // more options:
+    //   // https://github.com/kangax/html-minifier#options-quick-reference
+    // }
   }))
 })
 

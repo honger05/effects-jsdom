@@ -23,7 +23,7 @@ module.exports = {
       'components': path.resolve(__dirname, '../src/components'),
       'demos': path.resolve(__dirname, '../src/demos'),
       'tmpl': path.resolve(__dirname, '../src/tmpl'),
-      'utils': path.resolve(__dirname, '../src/utils/utils'),
+      'utils': path.resolve(__dirname, '../src/utils/utility'),
       'lib': path.resolve(__dirname, '../src/utils/lib'),
       'bower': path.resolve(__dirname, '../src/bower_components'),
       'animate': path.resolve(bowerRoot, 'animate.css-scss'),
@@ -89,7 +89,7 @@ module.exports = {
         }
       },
       {
-        test: path.resolve(__dirname, '../src/utils/utils'),
+        test: path.resolve(__dirname, '../src/utils/utility'),
         loader: 'expose?Utils'
       }
     ]

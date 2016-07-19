@@ -5,9 +5,10 @@ module.exports = {
   build: {
     index: path.resolve(__dirname, 'dist/index.html'),
     assetsRoot: path.resolve(__dirname, 'dist-un'),
+    // assetsSubDirectory: 'vuecnode/static',
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    productionSourceMap: true
+    productionSourceMap: false
   },
   dev: {
     port: 3000,
