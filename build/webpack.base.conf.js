@@ -4,6 +4,8 @@ var utils = require('./utils')
 var projectRoot = path.resolve(__dirname, '../')
 var bowerRoot = path.resolve(__dirname, '../src/bower_components/')
 var utilsRoot = path.resolve(__dirname, '../src/utils/')
+var precss = require('precss')
+var autoprefixer = require('autoprefixer')
 
 module.exports = {
   entry: {
@@ -96,6 +98,9 @@ module.exports = {
   },
   eslint: {
     formatter: require('eslint-friendly-formatter')
+  },
+  postcss: function () {
+    return [precss, autoprefixer]
   },
   vue: {
     loaders: utils.cssLoaders()

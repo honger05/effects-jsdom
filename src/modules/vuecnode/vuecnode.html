@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>vue-template</title>
+    <title>vue cnodejs 社区</title>
     <%= require('html!tmpl/inc-meta.html') %>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <router-view transition="views"
+        transition-mode="out-in">
+      </router-view>
+    </div>
 
     <%= require('html!tmpl/inc-footer.html') %>
   </body>

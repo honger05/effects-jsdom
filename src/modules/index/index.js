@@ -1,44 +1,29 @@
-import './assets/icomoon/style.css'
-import './assets/scss/CV.scss'
-import './assets/scss/github-markdown.css'
+import 'bower/vux/dist/vux.css'
+
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import FastClick from 'fastclick'
-import * as filters from './filters'
-import routerMap from './routers'
+import Router from 'vue-router'
+import App from './App'
 
-Vue.use(VueRouter)
+import Home from './Home'
 
-Object.keys(filters).forEach(k => Vue.filter(k, filters[k]))
+import Demo from './demos/Demo'
+import Pulldown from './demos/Pulldown'
 
-let router = new VueRouter({
-  hashbang: true,
-  history: false,
-  saveScrollPosition: true,
-  transitionOnLoad: true
-})
+Vue.use(Router)
+Vue.config.devtools = true
 
-router.beforeEach(transition => {
-  FastClick.attach(document.body)
+const router = new Router()
 
-  if (transition.to.auth) {
-    if (localStorage.userId) {
-      transition.next()
-    } else {
-      var redirect = encodeURIComponent(transition.to.path)
-      transition.redirect('/login?redirect=' + redirect)
-    }
-  } else {
-    transition.next()
+router.map({
+  '/': {
+    component: Home
+  },
+  '/demo': {
+    component: Demo
+  },
+  '/demo/pulldown': {
+    component: Pulldown
   }
 })
 
-router.afterEach(transition => {
-  console.log('成功浏览到: ' + transition.to.path)
-})
-
-let app = Vue.extend({})
-
-routerMap(router)
-
-router.start(app, '#app')
+router.start(App, '#app')
