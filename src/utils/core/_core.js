@@ -81,14 +81,14 @@ export function uniq (arr) {
   let newArr = []
   let flag = true
   arr.forEach(val => {
-    if (newArr.indexOf(val) === -1) {
-      if (val !== val) { // 排除 NaN
+    if (newArr.indexOf(val) === -1) { // 只有 NaN 和 {} 即使存在也是 -1
+      if (val !== val) { // 针对 NaN
         if (flag) {
           newArr.push(val)
           flag = false
         }
       } else {
-        newArr.push(val)
+        newArr.push(val) // {} 可以被多次添加
       }
     }
   })
