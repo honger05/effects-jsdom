@@ -1,5 +1,6 @@
 var path = require('path')
 var express = require('express')
+var router = require('./routers')
 var webpack = require('webpack')
 var config = require('../config')
 var proxyMiddleware = require('http-proxy-middleware')
@@ -14,6 +15,9 @@ var port = process.env.PORT || config.dev.port
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+
+router(app)
+
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

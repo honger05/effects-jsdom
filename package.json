@@ -5,6 +5,7 @@
   "author": "honger &lt;honger05@126.com&gt;",
   "private": true,
   "scripts": {
+    "mock": "NODE_ENV=mock nodemon build/dev-server.js",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
